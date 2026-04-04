@@ -295,6 +295,11 @@ p {
     transition: all 0.2s ease;
 }
 
+.section p {
+    font-size: var(--text-base);
+    color: var(--color-gray-700);
+}
+
 .form-signin {
     display: flex;
     flex-direction: column;
@@ -516,9 +521,8 @@ footer {
 
     .footer {
         padding: 1.75rem 2rem;
-        font-size: var(--text-base);
+        font-size: var(--text-xs);
     }
-
 }
 
 /* ===============================================
