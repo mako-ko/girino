@@ -451,7 +451,6 @@ footer {
 
     .section {
         padding: 2.5rem 2rem;
-        max-width: 520px;
     }
 
     .form-signin input {
@@ -505,7 +504,6 @@ footer {
 
     .section {
         padding: 2rem;
-        max-width: 600px;
         border-radius: 1.5rem;
     }
 
