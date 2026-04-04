@@ -15,7 +15,7 @@
         rel="stylesheet">
 
     <!-- Estilos personalizados -->
-    <link rel="stylesheet" href="https://mako-ko.github.io/tad/src/css/about.css">
+    <link rel="stylesheet" href="https://mako-ko.github.io/tad/src/css/dashboard.css">
 </head>
 
 <body>
@@ -23,14 +23,17 @@
     <a class="skip-line" href="#conteudo-principal">Pular para o conteúdo principal.</a>
     <header class="header">
         <!-- TAD -->
+        <a class="logo" href="https://mako-ko.github.io/tad/src/index.html">
             <div class="logo-icon">
                 <img loading="lazy" src="https://mako-ko.github.io/tad/src/img/icon.svg"
                     alt="tad, sistema gerenciador de tarefas">
             </div>
+        </a>
         <!-- Menu de Navegação -->
         <nav class="nav">
             <ul>
-                <li><a href="https://mako-ko.github.io/tad/src/pages/dashboard.html">Minhas tarefas</a></li>
+                <li class="nav-link"><a href="https://mako-ko.github.io/tad/src/pages/dashboard.html">Minhas tarefas</a>
+                </li>
                 <li><a href="https://mako-ko.github.io/tad/src/pages/newtask.html">Criar tarefa</a></li>
                 <li><a href="https://mako-ko.github.io/tad/src/pages/config.html">Configurações</a></li>
                 <li><a href="https://mako-ko.github.io/tad/src/pages/index.html">Sair</a></li>
@@ -40,77 +43,86 @@
 
     <!-- Conteúdo Principal -->
     <main class="main" id="conteudo-principal" tabindex="-1">
-        <h2>Minhas tarefas</h2>
+        <div class="taskboard">
 
-        <div class="taskboard" role="list" aria-label="Lista de tarefas">
-            
             <!-- exemplo de tarefa prioritária-->
-            <section class="task-card-frog">
+            <div class="task-card-frog">
                 <a href="https://mako-ko.github.io/tad/src/pages/00001.html" class="task-link">
                     <h3>Tarefa 1</h3>
                     <p>Descrição da tarefa 1.</p>
                 </a>
-                <a href="https://mako-ko.github.io/tad/src/pages/00001-edit.html">
-                    <button class="btn-edit" type="button">Editar</button>
-                </a>
-                <button class="btn-check" type="button">Concluir</button>
-            </section>
+                <div class="btn-group">
+                    <button class="btn-edit" type="button"><a
+                            href="https://mako-ko.github.io/tad/src/pages/00001-edit.html">Editar</a></button>
+                    <button class="btn-check" type="button">Concluir</button>
+                </div>
+            </div>
 
             <!-- exemplo de tarefa normal -->
-            <section class="task-card-frog">
+            <div class="task-card">
                 <a href="https://mako-ko.github.io/tad/src/pages/00002.html" class="task-link">
                     <h3>Tarefa 2</h3>
                     <p>Descrição da tarefa 2.</p>
                 </a>
-                <a href="https://mako-ko.github.io/tad/src/pages/00002-edit.html">
-                    <button class="btn-edit" type="button">Editar</button>
-                </a>
-                <button class="btn-check" type="button">Concluir</button>
-            </section>
+                <div class="btn-group">
+                    <button class="btn-edit" type="button"><a
+                            href="https://mako-ko.github.io/tad/src/pages/00002-edit.html">Editar</a></button>
+                    <button class="btn-check" type="button">Concluir</button>
+                </div>
 
-            <section class="task-card-frog">
+            </div>
+
+            <div class="task-card">
                 <a href="https://mako-ko.github.io/tad/src/pages/00003.html" class="task-link">
                     <h3>Tarefa 3</h3>
                     <p>Descrição da tarefa 3.</p>
                 </a>
-                <a href="https://mako-ko.github.io/tad/src/pages/00003-edit.html">
-                    <button class="btn-edit" type="button">Editar</button>
-                </a>
-                <button class="btn-check" type="button">Concluir</button>
-            </section>
+                <div class="btn-group">
+                    <button class="btn-edit" type="button"><a
+                            href="https://mako-ko.github.io/tad/src/pages/00003-edit.html">Editar</a></button>
+                    <button class="btn-check" type="button">Concluir</button>
+                </div>
 
-            <section class="task-card-frog">
+            </div>
+
+            <div class="task-card">
                 <a href="https://mako-ko.github.io/tad/src/pages/00004.html" class="task-link">
                     <h3>Tarefa 4</h3>
                     <p>Descrição da tarefa 4.</p>
                 </a>
-                <a href="https://mako-ko.github.io/tad/src/pages/00004-edit.html">
-                    <button class="btn-edit" type="button">Editar</button>
-                </a>
-                <button class="btn-check" type="button">Concluir</button>
-            </section>
+                <div class="btn-group">
+                    <button class="btn-edit" type="button"><a
+                            href="https://mako-ko.github.io/tad/src/pages/00004-edit.html">Editar</a></button>
+                    <button class="btn-check" type="button">Concluir</button>
+                </div>
 
-            <section class="task-card-frog">
+            </div>
+
+            <div class="task-card">
                 <a href="https://mako-ko.github.io/tad/src/pages/00005.html" class="task-link">
                     <h3>Tarefa 5</h3>
                     <p>Descrição da tarefa 5.</p>
                 </a>
-                <a href="https://mako-ko.github.io/tad/src/pages/00005-edit.html">
-                    <button class="btn-edit" type="button">Editar</button>
-                </a>
-                <button class="btn-check" type="button">Concluir</button>
-            </section>
+                <div class="btn-group">
+                    <button class="btn-edit" type="button"><a
+                            href="https://mako-ko.github.io/tad/src/pages/00005-edit.html">Editar</a></button>
+                    <button class="btn-check" type="button">Concluir</button>
+                </div>
 
-            <section class="task-card-frog">
+            </div>
+
+            <div class="task-card">
                 <a href="https://mako-ko.github.io/tad/src/pages/00006.html" class="task-link">
                     <h3>Tarefa 6</h3>
                     <p>Descrição da tarefa 6.</p>
                 </a>
-                <a href="https://mako-ko.github.io/tad/src/pages/00006-edit.html">
-                    <button class="btn-edit" type="button">Editar</button>
-                </a>
-                <button class="btn-check" type="button">Concluir</button>
-            </section>
+                <div class="btn-group">
+                    <button class="btn-edit" type="button"><a
+                            href="https://mako-ko.github.io/tad/src/pages/00006-edit.html">Editar</a></button>
+                    <button class="btn-check" type="button">Concluir</button>
+                </div>
+
+            </div>
         </div>
     </main>
 
