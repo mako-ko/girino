@@ -276,7 +276,7 @@ p {
     display: none;
 }
 
-/* Conteúdo Principal */
+/* Conteúdo Principal - Dashboard de Tarefas */
 .main {
     width: 100%;
     justify-content: center;
@@ -287,6 +287,33 @@ p {
     flex-wrap: wrap;
     gap: 1.5rem;
     text-align: center;
+}
+
+.task-title {
+    display: flex;
+    flex-wrap: wrap;
+    gap: inherit;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+
+.task-card-frog .task-title .btn-cancel {
+    position: sticky;
+    right: 0;
+    background-color: var(--color-gray-300);
+    color: var(--color-gray-50);
+    border: none;
+    padding: 0.75rem 1rem;
+    font-family: var(--font-noto-sans-mono);
+    font-size: var(--text-base);
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 2rem;
+    width: minmax(auto, 100%);
+    height: fit-content;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
 .task-card-frog {
@@ -333,8 +360,39 @@ p {
     font-weight: 600;
 }
 
+.task-card-frog .btn-save {
+    background-color: var(--color-secondary);
+    border: none;
+    padding: 0.75rem 1rem;
+    font-family: var(--font-noto-sans-mono);
+    font-size: var(--text-base);
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 2rem;
+    width: minmax(auto, 100%);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.task-card-frog .btn-save a {
+    color: var(--color-gray-50);
+}
+
+.task-card-frog .btn-reset {
+    background-color: var(--color-gray-300);
+    color: var(--color-gray-600);
+    border: none;
+    padding: 0.75rem 1rem;
+    font-family: var(--font-noto-sans-mono);
+    font-size: var(--text-base);
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 2rem;
+    width: minmax(auto, 100%);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
 .task-card-frog .btn-check {
-    background-color: var(--color-primary-contrast);
+    background-color: var(--color-primary-dark);
     color: var(--color-gray-50);
     border: none;
     padding: 0.75rem 1rem;
@@ -349,7 +407,7 @@ p {
 
 .task-card {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex: 1 1 250px;
     align-items: center;
     gap: 1rem;
@@ -426,30 +484,48 @@ p {
 .btn-group {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.75rem;
     justify-content: center;
+    gap: 1.5rem;
 }
 
-/* Código de FORMULÁRIO não é usado nessa  página. 
-.form-signin {
+/* Formulário - Dashboard*/
+.form-task {
     display: flex;
-    flex-direction: column;
+    flex-flow: column;
+    width: 100%;
     gap: 1.25rem;
 }
 
-.form-signin p {
+.form-1 {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: inherit;
+    justify-content: center;
+}
+
+.form-task p {
+    display: flex;
+    flex-direction: row;
     gap: 0.5rem;
 }
 
-.form-signin label {
+.form-task label {
     font-weight: 600;
     color: var(--color-gray-700);
 }
 
-.form-signin input,
-.form-signin textarea {
+.title-task input {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    font-family: var(--font-sour-gummy);
+    font-size: var(--text-3xl);
+    border: 1px solid var(--color-gray-300);
+    border-radius: 0.75rem;
+    transition: all 0.2s ease;
+}
+
+.form-task textarea {
     width: 100%;
     padding: 0.85rem 1rem;
     font-family: var(--font-noto-sans-mono);
@@ -459,15 +535,30 @@ p {
     transition: all 0.2s ease;
 }
 
-.form-signin input:focus,
-.form-signin textarea:focus {
+.form-1 input,
+.form-1 select {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    font-family: var(--font-noto-sans-mono);
+    font-size: var(--text-base);
+    border: 1px solid var(--color-gray-300);
+    border-radius: 0.75rem;
+    transition: all 0.2s ease;
+}
+
+.title-task input:focus,
+.form-task textarea:focus,
+.form-1 input:focus,
+.form-1 select:focus {
     outline: none;
     border-color: var(--color-primary);
     color: var(--color-primary-dark);
 }
 
-.form-signin input::placeholder,
-.form-signin textarea::placeholder {
+.title-task input::placeholder,
+.form-task textarea::placeholder,
+.form-1 input::placeholder,
+.form-task option {
     color: var(--color-gray-400);
     opacity: 0.5;
 }
@@ -503,7 +594,6 @@ p {
     outline: 2px solid var(--color-secondary-dark);
     outline-offset: 4px;
 }
-*/
 
 /* Footer */
 footer {
@@ -513,6 +603,7 @@ footer {
     opacity: 0.35;
     text-align: center;
     width: 100%;
+    padding-top: 2rem;
 }
 
 /* ===============================================
